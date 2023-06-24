@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "67ef61d2-db50-4baa-8931-ab5e3d46358c",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Items URL's",
+			"item": [
+				{
+					"name": "Получение списка товаров из БД",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/items/get-all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"items",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получение товара из БД по id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/items/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"items",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Добавление нового товара в БД",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"MacBook Air\",\n    \"weight\":30,\n    \"rating\":5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/items/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"items",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Редактирование товара",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"MacBook Pro\",\n    \"weight\":50,\n    \"rating\":5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/items/edit/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"items",
+								"edit",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление товара из БД",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/items/drop/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"items",
+								"drop",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clients URL's",
+			"item": [
+				{
+					"name": "Получение списка клиентов из БД",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clients/get-all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получение клиента из БД по id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clients/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Добавление нового клиента в БД",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Oleg\",\n    \"secondName\":\"Petrov\",\n    \"age\":25\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clients/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Изменение существующего клиента в БД",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Alex\",\n    \"secondName\":\"Mongratov\",\n    \"age\":26\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clients/edit/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"edit",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление существующего клиента",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Alex\",\n    \"secondName\":\"Mongratov\",\n    \"age\":26\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clients/drop/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"drop",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
