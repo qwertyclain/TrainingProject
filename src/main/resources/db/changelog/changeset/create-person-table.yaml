@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_table_person
+      author: Artem Stepanov
+      changes:
+        -  createTable:
+             tableName: Person
+             columns:
+               - column:
+                   name: id
+                   type: int
+                   autoIncrement: true
+                   constraints:
+                     primaryKey: true
+               - column:
+                   name: name
+                   type: varchar(10)
+                   constraints:
+                     nullable: false
+               - column:
+                   name: second_name
+                   type: varchar(15)
+                   constraints:
+                     nullable: false
+               - column:
+                   name: age
+                   type: int
+
