@@ -4,7 +4,7 @@ databaseChangeLog:
       author: Artem Stepanov
       changes:
         -  createTable:
-             tableName: Person
+             tableName: person
              columns:
                - column:
                    name: id
@@ -25,4 +25,5 @@ databaseChangeLog:
                - column:
                    name: age
                    type: int
-
+                   constraints:
+                     validateNullable: true

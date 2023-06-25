@@ -13,7 +13,7 @@ public class Item {
     private String name;
     private double weight;
     private double rating;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "person_id", referencedColumnName = "id")
     private Client owner;
 }
